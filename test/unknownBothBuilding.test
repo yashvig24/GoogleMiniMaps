@@ -1,0 +1,8 @@
+# Verify that the program prints 
+# "Unknown building: " + buildingName 
+r
+SEA
+SAN
+
+# terminate the program
+q

@@ -1,0 +1,18 @@
+# Test MarvelPaths does not allow adding reflexive edge
+
+# Parse through the data and build the graph
+LoadGraph reflective_nodes_graph reflective.tsv
+
+# List nodes and edges to see if the graph is built correctly
+ListNodes reflective_nodes_graph
+ListChildren reflective_nodes_graph New-York
+ListChildren reflective_nodes_graph San-Fran
+
+# Find the shortest path 
+FindPath reflective_nodes_graph New-York San-Fran
+
+# Find the shortest path other side
+FindPath reflective_nodes_graph San-Fran New-York
+
+# Find the shortest path to itself
+FindPath reflective_nodes_graph San-Fran San-Fran

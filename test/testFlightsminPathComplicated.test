@@ -1,0 +1,7 @@
+# Tests find minimum-cost path on flights graph.
+
+# Load sports.tsv
+LoadGraph flights flights.tsv
+
+# Test find minimum-cost path not shortest path
+FindPath flights New-York Las-Vegas

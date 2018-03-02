@@ -1,0 +1,10 @@
+# Tests find minimum-cost path on flights graph.
+
+# Load sports.tsv
+loaded graph flights
+
+# Test find minimum-cost path not shortest path
+path from New-York to Las-Vegas:
+New-York to San-Fran with weight 0.500
+San-Fran to Las-Vegas with weight 1.000
+total cost: 1.500

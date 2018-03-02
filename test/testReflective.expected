@@ -1,0 +1,23 @@
+# Test MarvelPaths does not allow adding reflexive edge
+
+# Parse through the data and build the graph
+loaded graph reflective_nodes_graph
+
+# List nodes and edges to see if the graph is built correctly
+reflective_nodes_graph contains: New-York San-Fran
+the children of New-York in reflective_nodes_graph are: San-Fran(1.0)
+the children of San-Fran in reflective_nodes_graph are: New-York(1.0)
+
+# Find the shortest path
+path from New-York to San-Fran:
+New-York to San-Fran with weight 1.000
+total cost: 1.000
+
+# Find the shortest path other side
+path from San-Fran to New-York:
+San-Fran to New-York with weight 1.000
+total cost: 1.000
+
+# Find the shortest path to itself
+path from San-Fran to San-Fran:
+total cost: 0.000
